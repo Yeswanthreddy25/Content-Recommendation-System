@@ -1,6 +1,6 @@
 # 🎵 Emoji Music Recommendation System
 
-A full-stack Python web application that recommends music based on emoji emotions using Machine Learning and the Spotify API.
+A full-stack Python web application that recommends music based on emoji emotions using Machine Learning and API's.
 
 ## Features
 - **Emoji Selector**: Click an emoji (😊, 😢, 🔥, etc.) to get songs matching that mood.
@@ -41,3 +41,4 @@ A full-stack Python web application that recommends music based on emoji emotion
 - `model.pkl`: Saved Machine Learning model and dataset.
 - `liked_songs.json`: Stores your liked songs.
 - `data/`: Contains the music dataset CSV.
+
