@@ -1,44 +1,44 @@
-# 🎵 Emoji Music Recommendation System
+# 🍿 Emotify - Music Recommendation
 
-A full-stack Python web application that recommends music based on emoji emotions using Machine Learning and API's.
+A cinematic, full-stack music recommendation system that matches your mood with the perfect soundtrack using Machine Learning. Built with Streamlit, powered by the iTunes API, and integrated with YouTube Music for full playback.
 
-## Features
-- **Emoji Selector**: Click an emoji (😊, 😢, 🔥, etc.) to get songs matching that mood.
-- **ML Recommendations**: Uses a RandomForestClassifier and Audio Feature Mapping.
-- **Spotify Integration**: Search for real songs, artists, and albums.
-- **Music Playback**: 30-second audio previews for supported tracks.
-- **Favorites**: Like songs to save them to your personal sidebar collection (persisted across sessions).
+## ✨ Features
+- **Netflix Aesthetics**: A premium, dark-themed UI with horizontal mood sliders and poster grids.
+- **Mood-Based Discovery**: Select from 9 core emotions (😊, 😢, 🔥, etc.) to get instant curated playlists.
+- **Multi-Language Support**: Discover music in **English, Hindi, Spanish, Korean, and Telugu**.
+- **Smart Search**: Search for any track, artist, or album across the globe.
+- **My List**: Save your favorite tracks to a persistent personal collection.
+- **Seamless Playback**: Watch and listen to music videos directly in the app via YouTube integration.
 
-## Setup Instructions
+## 🚀 Getting Started
 
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 1. Install Dependencies
+Ensure you have Python installed, then run:
+```bash
+pip install -r requirements.txt
+```
 
-2. **Spotify Configuration (Optional but Recommended)**:
-   - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) and create an app.
-   - Open `config.py` and replace the placeholders with your `Client ID` and `Client Secret`.
-   - *If you skip this, the app will run in "Offline Mode" using synthetic/mock data.*
+### 2. No API Keys Needed!
+> [!IMPORTANT]
+> It uses the free iTunes Search API for discovery and `ytmusicapi` for playback components, making it "plug-and-play" ready out of the box.
 
-3. **Data Generation**:
-   Run the training script to fetch data (or generate synthetic data) and train the model:
-   ```bash
-   python train_model.py
-   ```
-   *This creates `model.pkl` and `data/music_dataset.csv`.*
+### 3. Initialize the Model
+Before running the app, fetch the latest data and prepare the recommendation engine:
+```bash
+python train_model.py
+```
+*This creates `model.pkl` and `data/music_dataset.csv`.*
 
-4. **Run the App**:
-   ```bash
-   streamlit run app.py
-   ```
-   The app will open in your browser at `http://localhost:8501`.
+### 4. Run the App
+Launch the Streamlit dashboard:
+```bash
+python -m streamlit run app.py
+```
+Open `http://localhost:8501` in your browser to start your cinematic music journey.
 
-## File Structure
-- `app.py`: Main Streamlit application.
-- `train_model.py`: Script to fetch/generate data and train the ML model.
-- `config.py`: Configuration file for API keys.
-- `model.pkl`: Saved Machine Learning model and dataset.
-- `liked_songs.json`: Stores your liked songs.
-- `data/`: Contains the music dataset CSV.
-
+## 📂 Project Structure
+- `app.py`: The main Netflix-style dashboard and application logic.
+- `train_model.py`: Data ingestion (iTunes) and keyword-based mood labeling.
+- `model.pkl`: Serialized dataset and mood mapping artifacts.
+- `liked_songs.json`: Your persisted "My List" collection.
+- `requirements.txt`: Project dependencies and environment specs.
